@@ -143,24 +143,28 @@ class _SignScreenState extends State<SignScreen> with TickerProviderStateMixin {
                 child: Column(children: [
                   const SizedBox(height: 20),
                   CustomButton(
-                    title: "Sign In",
+                    title: tabIndex == 0 ? "Sign In" : "Sign Up",
                     txtColor: appColors.primaryColor,
                     bgColor: const Color(0xFF121314),
                   ),
                   const SizedBox(height: 20),
-                  CustomButton(
-                    title: "Login with Facebook",
-                    txtColor: Colors.white,
-                    bgColor: appColors.blueColor,
-                  ),
+                  tabIndex == 0
+                      ? CustomButton(
+                          title: "Login with Facebook",
+                          txtColor: Colors.white,
+                          bgColor: appColors.blueColor,
+                        )
+                      : Container(),
                   const SizedBox(height: 30),
-                  const Text(
-                    "Forget Password",
-                    style: TextStyle(
-                      color: Color(0xFF121314),
-                      fontWeight: FontWeight.w300,
-                    ),
-                  )
+                  tabIndex == 0
+                      ? const Text(
+                          "Forget Password",
+                          style: TextStyle(
+                            color: Color(0xFF121314),
+                            fontWeight: FontWeight.w300,
+                          ),
+                        )
+                      : Container(),
                 ]),
               ),
               Positioned(
