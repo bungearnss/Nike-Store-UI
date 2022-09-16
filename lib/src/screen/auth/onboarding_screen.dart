@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../model/models.dart';
 import '../../util/appColor.dart';
 
-import './register_screen.dart';
+import 'sign_screen.dart';
 
 class OnboradingScreen extends StatefulWidget {
   const OnboradingScreen({super.key});
@@ -141,8 +141,7 @@ class _OnboradingScreenState extends State<OnboradingScreen> {
                 child: GestureDetector(
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const RegisterScreen()),
+                    MaterialPageRoute(builder: (context) => const SignScreen()),
                   ),
                   child: Container(
                     color: appColors.primaryColor,

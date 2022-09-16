@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './src/screen/auth/onboarding_screen.dart';
+import './src/screen/auth/sign_screen.dart';
 import './src/util/appColor.dart';
 
 void main() {
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const OnboradingScreen(),
+      home: const SignScreen(),
     );
   }
 }

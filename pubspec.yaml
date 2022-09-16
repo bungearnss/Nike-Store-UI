@@ -64,6 +64,10 @@ flutter:
     - assets/images/onboard1.png
     - assets/images/onboard2.png
     - assets/images/onboard3.png
+    - assets/images/nike_logo.png
+    - assets/icons/lock_icon.png
+    - assets/icons/user_icon.png
+    - assets/icons/mail_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
