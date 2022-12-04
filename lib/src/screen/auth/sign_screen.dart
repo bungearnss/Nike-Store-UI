@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../util/appColor.dart';
 import '../../components/custombutton.dart';
 
+import '../../screen/home/hompage_screen.dart';
+
 class SignScreen extends StatefulWidget {
   const SignScreen({super.key});
 
@@ -171,18 +173,24 @@ class _SignScreenState extends State<SignScreen> with TickerProviderStateMixin {
                 bottom: 20,
                 left: width * 0.29,
                 child: Row(
-                  children: const [
-                    Icon(
+                  children: [
+                    const Icon(
                       Icons.person_add_outlined,
                       color: Color.fromARGB(255, 218, 218, 218),
                       size: 20,
                     ),
-                    SizedBox(width: 10),
-                    Text(
-                      "Sign In with Guest",
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 183, 183, 183),
-                        decoration: TextDecoration.underline,
+                    const SizedBox(width: 10),
+                    GestureDetector(
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomepageScreen())),
+                      child: const Text(
+                        "Sign In with Guest",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 183, 183, 183),
+                          decoration: TextDecoration.underline,
+                        ),
                       ),
                     ),
                   ],
